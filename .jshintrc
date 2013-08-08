@@ -1,0 +1,17 @@
+{
+  "boss": true,
+  "browser": true,
+  "curly": true,
+  "eqnull": true,
+  "immed": true,
+  "latedef": true,
+  "noarg": true,
+  "smarttabs": false,
+  "trailing": true,
+  "undef": true,
+  "unused": true,
+  "globals": {
+    "define": false,
+    "require": false
+  }
+}

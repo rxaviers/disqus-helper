@@ -6,6 +6,7 @@
     "url": "git@github.com:rxaviers/disqus-helper.git"
   },
   "devDependencies": {
-    "jquery": "1.10.2"
+    "jquery": "1.10.2",
+    "requirejs": "2.1.5"
   }
 }
