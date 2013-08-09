@@ -1,4 +1,4 @@
-## DISQUS Helper
+# DISQUS Helper
 
 *DISQUS client-side made easy.*
 
@@ -40,10 +40,53 @@ define(["disqus"], function(disqus) {
         shortname: "<shortname>",
         url: "<url>",
         identifier: "<identifier>"
-    }).done(function(element) {
-        element.appendTo("body");
     });
 
+});
+```
+
+## Another a-bit-more-explanatory example
+
+DISQUS-helper automatically loads, initializes or resets it for you. All you do
+is `disqus.set`.
+
+```javascript
+/**
+ * The first time `.set()` is called, DISQUS is loaded and initialized.
+ *
+ * Attributes `shortname` and `url` are required.
+ */
+disqus.set({
+    shortname: "<shortname>",
+    url: "<url>",
+    hide: true
+});
+
+$(".tab1").click(function() {
+    /**
+     * Subsequent `.set()` calls reset it.
+     *
+     * Attributes are updated, so you don't need to pass, for example, shortname
+     * again.
+     *
+     * It returns a $.Deferred that, when resolved, passes a jQuery element at
+     * where DISQUS is loaded as parameter.
+     */
+    disqus.set({
+        url: "<url1>"
+        identifier: "<identifier1>"
+    }).done(function(element) {
+        element.detach().appendTo("container1");
+    });
+});
+
+$(".tab2").click(function() {
+    disqus.set({
+        url: "<url2>"
+        identifier: "<identifier2>"
+    }).done(function(element) {
+        element.detach().appendTo("container2");
+    });
 });
 ```
 
