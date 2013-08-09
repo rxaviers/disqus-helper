@@ -8,7 +8,7 @@ In bower.json:
 
 ```javascript
 "devDependencies": {
-    "disqus": "rxaviers/disqus-helper#0.1.x",
+    "disqus": "rxaviers/disqus-helper#0.0.x",
     "jquery": "x.x.x"
 }
 ```
