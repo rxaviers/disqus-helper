@@ -24,7 +24,7 @@ define(["jquery"], function($) {
   }
 
   function init() {
-    return documentReady.done(function() {
+    documentReady.done(function() {
       //var disqus_config disqus_developer, disqus_identifier, disqus_shortname, disqus_url;
       window.disqus_config = config;
       element = $("<div>").attr("id", "disqus_thread").appendTo("body");
@@ -36,6 +36,7 @@ define(["jquery"], function($) {
         disqusReady.resolve(element);
       });
     });
+    return disqusReady;
   }
 
   function reset() {
