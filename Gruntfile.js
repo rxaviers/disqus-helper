@@ -8,7 +8,9 @@ module.exports = function(grunt) {
       options: {
         jshintrc: ".jshintrc"
       },
-      all: "*.js"
+      grunt: "Gruntfile.js",
+      disqus: "disqus.js",
+      demo: "demo/*.js"
     }
   });
 
